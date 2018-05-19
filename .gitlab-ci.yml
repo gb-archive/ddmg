@@ -1,4 +1,4 @@
-image: dlang2/ldc-alpine
+image: dlang2/ldc-ubuntu
 
 stages:
 - install_dependencies
@@ -7,7 +7,7 @@ stages:
 
 install-deps:
        stage: install_dependencies
-       script: apk install sdl2 sdl2-dev glfw glfw-dev
+       script: sudo apt install libsdl2 libsdl2-dev libglfw3 libglfw3-dev
 
 build-release:
        stage: build

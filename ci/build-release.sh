@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -eux -o pipefail
+set -eux
 
 # Test for successful release build
 dub build -b release

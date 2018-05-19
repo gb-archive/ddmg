@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -eux -o pipefail
+set -eux
 
 # Run unit tests
 ./trial/trial

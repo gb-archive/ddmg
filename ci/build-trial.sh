@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -eux -o pipefail
+set -eux
 
 # Build trial
 git clone https://github.com/gedaiu/trial.git

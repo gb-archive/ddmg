@@ -1,6 +1,20 @@
+image: dlang2/ldc-alpine
+
+stages:
+- install_dependencies
+- build
+- test
+
+install-deps:
+       stage: install_dependencies
+       script: apk install sdl2 sdl2-dev glfw glfw-dev
+
 build-release:
        stage: build
        script: ci/build-release.sh
+       artifacts:
+               paths:
+               - ddmg
 
 build-trial:
         stage: build

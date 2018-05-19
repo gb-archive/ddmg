@@ -1,14 +1,5 @@
 image: dlang2/ldc-ubuntu
 
-stages:
-- install_dependencies
-- build
-- test
-
-install-deps:
-       stage: install_dependencies
-       script: apt-get update -qq && apt-get install -y -qq libsdl2-dev libglfw3-dev git
-
 build-release:
        stage: build
        script: ci/build-release.sh
@@ -18,7 +9,7 @@ build-release:
 
 build-trial:
         stage: build
-        script: ci/build-trial.sh
+        script: apt-get update -qq && apt-get install -y -qq git && ci/build-trial.sh
         artifacts:
                 paths:
                 - trial/trial

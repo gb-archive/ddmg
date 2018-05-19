@@ -7,7 +7,7 @@ stages:
 
 install-deps:
        stage: install_dependencies
-       script: sudo apt install libsdl2 libsdl2-dev libglfw3 libglfw3-dev
+       script: apt install libsdl2 libsdl2-dev libglfw3 libglfw3-dev
 
 build-release:
        stage: build

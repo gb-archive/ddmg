@@ -1,7 +1,8 @@
 {
 	"reporters": [
 		"spec",
-		"result"
+		"result",
+		"xunit"
 	],
 	"executor": "default",
 	"glyphs": {
